@@ -8,7 +8,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-	environment: SIT
+    environment: SIT
     steps:
     - uses: google/secrets-sync-action@v1.7.0
       with:
