@@ -8,16 +8,18 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+	environment: SIT
     steps:
-    - uses: jpoehnelt/secrets-sync-action@v1.4.1
+    - uses: google/secrets-sync-action@v1.7.0
       with:
         SECRETS: |
-          ^FOO$
-          ^FOO2$
+          FOO
+          FOO2
         REPOSITORIES: |
-          ^techgoogle1/test2$
+          techgoogle1/test2
         DRY_RUN: false
         environment: SIT
+		repositories_list_regex: false
         GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN_CLASSIC }}
         CONCURRENCY: 10
       env:
