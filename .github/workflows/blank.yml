@@ -9,11 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: google/secrets-sync-action@v1.7.0
+    - uses: jpoehnelt/secrets-sync-action@v1.4.1
       with:
         SECRETS: |
           ^FOO$
-          ^SIT_TEST$
+          ^FOO2$
         REPOSITORIES: |
           ^techgoogle1/test2$
         DRY_RUN: false
@@ -21,6 +21,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN_CLASSIC }}
         GITHUB_API_URL: ${{ secrets.CUSTOM_GITHUB_API_URL }}
         CONCURRENCY: 10
-      env:
-       FOO: ${{github.run_id}}
-       FOOBAR: BAZ
