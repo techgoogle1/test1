@@ -1,7 +1,7 @@
 name: Deploy2 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "sit" ]
 env:
   buildNumber: ${{ github.run_number }}
 
