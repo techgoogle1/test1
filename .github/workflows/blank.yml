@@ -19,8 +19,7 @@ jobs:
         DRY_RUN: false
         environment: SIT
         GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN_CLASSIC }}
-        GITHUB_API_URL: ${{ secrets.CUSTOM_GITHUB_API_URL }}
         CONCURRENCY: 10
       env:
-       FOO: ${{github.run_id}}
-       FOOBAR: BAZ
+       FOO: ${{secrets.FOO}}
+       FOOBAR: ${{secrets.FOO2}}
