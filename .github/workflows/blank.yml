@@ -13,6 +13,7 @@ jobs:
       with:
         SECRETS: |
           ^FOO$
+          ^SIT_TEST$
         REPOSITORIES: |
           ^techgoogle1/test2$
         DRY_RUN: false
