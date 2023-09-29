@@ -22,4 +22,4 @@ jobs:
         CONCURRENCY: 10
       env:
        FOO: ${{secrets.FOO}}
-       FOOBAR: ${{secrets.FOO2}}
+       FOO2: ${{secrets.FOO2}}
