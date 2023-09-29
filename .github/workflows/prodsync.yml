@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: PROD
     steps:
-    - uses: jpoehnelt/secrets-sync-action@
+    - uses: jpoehnelt/secrets-sync-action@v1.4.1
       with:
         SECRETS: |
           FOO
