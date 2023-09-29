@@ -8,7 +8,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: SIT
+    environment: PROD
     steps:
     - uses: google/secrets-sync-action@v1.7.0
       with:
@@ -18,7 +18,7 @@ jobs:
         REPOSITORIES: |
           techgoogle1/test2
         DRY_RUN: false
-        environment: SIT
+        environment: PROD
         GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN_CLASSIC }}
         CONCURRENCY: 10
       env:
