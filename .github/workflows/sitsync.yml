@@ -1,4 +1,4 @@
-name: Deploy SIT 
+name: Deploy SIT - dry run
 on:
   push:
     branches: [ "sit" ]
